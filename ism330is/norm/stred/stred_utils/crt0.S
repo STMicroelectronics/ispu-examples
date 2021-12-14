@@ -133,7 +133,7 @@ init_data_end:
 	define_weak_label _start
 _start:
 	movw	%r0, #-1
-	stw	[RL_ADDR_GLB_CALL_EN], %r0		; enable all interrupts
+	stw	[STRED_GLB_CALL_EN], %r0		; enable all interrupts
 	jli	main
 	jli exit
 stpclk:	stop_and_wait_start_pulse
