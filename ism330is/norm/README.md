@@ -23,4 +23,4 @@ The configuration generates an interrupt on INT1 when the norm for the new sampl
 
 **More Information: [http://www.st.com](http://st.com/MEMS)**
 
-**Copyright © 2021 STMicroelectronics**
+**Copyright © 2022 STMicroelectronics**

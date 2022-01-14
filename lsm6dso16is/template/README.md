@@ -1,6 +1,6 @@
 ## 1 - Introduction
 
-This is a template for creating a project for STRed-ISPU.
+This is a template for creating a new project for STRed-ISPU.
 
 The *stred* folder may be copied by itself (no dependencies other than the CLI toolchain or IDE environment that must be installed) and used as a starting blank project to implement any solution running on STRed-ISPU.
 
@@ -20,7 +20,7 @@ The *stred* folder contains:
   * *global.S*: additional assembly file.
   * *reg_map.h*: register map defines.
   * *peripherals.h*: cast defines and others.
-* ***conf.txt***: file containing sensor configuration. Please refer to the help of the *stred_gen* command line tool for how to modify the configuration.
+* ***conf.txt***: file containing sensor configuration. Please refer to the help of the *stred_gen* command line tool (included in the toolchain or Eclipse IDE) for how to modify the configuration.
 * ***make***: folder containing the makefile for building using the command line.
 * ***eclipse***: folder containing the Eclipse project.
 
@@ -28,4 +28,4 @@ The *stred* folder contains:
 
 **More Information: [http://www.st.com](http://st.com/MEMS)**
 
-**Copyright © 2021 STMicroelectronics**
+**Copyright © 2022 STMicroelectronics**

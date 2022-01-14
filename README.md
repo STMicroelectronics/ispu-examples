@@ -21,7 +21,7 @@ The toolchain must be extracted from the downloaded archive to any folder on the
   * Under the "System Variables" section, find the row with "Path" in the "Variable" column, select it and click "Edit...".
   * Click on the "Browse..." button, browse into the folder where the toolchain is installed, select the *bin* folder and click "OK".
   * Close all remaining windows by clicking "OK".
-  * Open a new terminal to see the changes applied.
+  * Open a new terminal. The toolchain should now be available to be called from the command line (e.g., the *reisc-gcc* command should be found if the user tries to run it).
 
 * On Linux and MacOS:
 
@@ -31,7 +31,7 @@ The toolchain must be extracted from the downloaded archive to any folder on the
     export PATH=$PATH":/path/to/toolchain/bin"
     ```
     
-  * Open a new terminal to see the changes applied.
+  * Open a new terminal. The toolchain should now be available to be called from the command line (e.g., the *reisc-gcc* command should be found if the user tries to run it).
 
 Once the toolchain is installed, in order to build a project, the user must enter the *stred/make* directory inside the project and run *make*. Enjoy.
 
@@ -53,4 +53,4 @@ Once the plugins are installed, in order to build a project, the user must go to
 
 **More Information: [http://www.st.com](http://st.com/MEMS)**
 
-**Copyright © 2021 STMicroelectronics**
+**Copyright © 2022 STMicroelectronics**
