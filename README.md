@@ -43,9 +43,9 @@ In order to install the plugins, from the main menu, go to "Help", click on "Ins
 
 The URL to use is:
 
-* On Windows: [http://reisc-sdk.codex.cro.st.com/eclipse_update_site/win](http://reisc-sdk.codex.cro.st.com/eclipse_update_site/win)
-* On Linux: [http://reisc-sdk.codex.cro.st.com/eclipse_update_site/linux](http://reisc-sdk.codex.cro.st.com/eclipse_update_site/linux)
-* On MacOS: [http://reisc-sdk.codex.cro.st.com/eclipse_update_site/macos](http://reisc-sdk.codex.cro.st.com/eclipse_update_site/macos)
+* On Windows: [https://sw-center.st.com/mems/ispu/stred_ispu_repository_win](https://sw-center.st.com/mems/ispu/stred_ispu_repository_win)
+* On Linux: [https://sw-center.st.com/mems/ispu/stred_ispu_repository_linux](https://sw-center.st.com/mems/ispu/stred_ispu_repository_linux)
+* On MacOS: [https://sw-center.st.com/mems/ispu/stred_ispu_repository_macos](https://sw-center.st.com/mems/ispu/stred_ispu_repository_macos)
 
 Once the plugins are installed, in order to build a project, the user must go to "File", click on "Import...". Under "General" select "Existing Project into Workspace", click on the "Next" button, click on the "Browse" button, select the folder containing the project and click on the "Finish" button. The project is now imported and can be built. Enjoy.
 
