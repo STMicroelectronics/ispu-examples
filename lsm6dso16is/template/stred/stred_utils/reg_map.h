@@ -84,7 +84,7 @@
 #define STRED_INT_STATUS_B (__ctrl_reg_base+0x59)
 #define STRED_INT_STATUS_C (__ctrl_reg_base+0x5A)
 #define STRED_INT_STATUS_D (__ctrl_reg_base+0x5B)
-#define STRED_INT_PAD      (__ctrl_reg_base+0x5C)
+#define STRED_INT_PIN      (__ctrl_reg_base+0x5C)
 #define STRED_ALGO         (__ctrl_reg_base+0x70)
 #define STRED_ALGO_B       (__ctrl_reg_base+0x71)
 #define STRED_ALGO_C       (__ctrl_reg_base+0x72)

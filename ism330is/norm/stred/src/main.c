@@ -42,7 +42,7 @@ int main(void)
 		// reset status registers and interrupts
 		int_status = 0;
 		cast_uint8_t(STRED_INT_STATUS) = 0x00;
-		cast_uint8_t(STRED_INT_PAD) = 0x00;
+		cast_uint8_t(STRED_INT_PIN) = 0x00;
 
 		// get all the algorithms to run in this time slot
 		cast_uint32_t(STRED_CALL_EN) = cast_uint32_t(STRED_ALGO) << 1;
@@ -52,8 +52,9 @@ int main(void)
 
 		// set status registers and generate interrupts
 		cast_uint32_t(STRED_INT_STATUS) = int_status;
-		cast_uint8_t(STRED_INT_PAD) = ((int_status & cast_uint32_t(STRED_INT1_CTRL) > 0) << 0) |
-			((int_status & cast_uint32_t(STRED_INT2_CTRL) > 0) << 1);
+		cast_uint8_t(STRED_INT_PIN) = (((int_status & cast_uint32_t(STRED_INT1_CTRL)) > 0) << 0) |
+			(((int_status & cast_uint32_t(STRED_INT2_CTRL)) > 0) << 1);
+
 	}
 }
 
