@@ -10,7 +10,7 @@ Prebuilt files containing the ready to use device configuration are available in
 
 In order to build a project using the command line, the STRed-ISPU toolchain must be installed on the system. Besides the toolchain, the *make* build tool must be installed.
 
-The toolchain can be downloaded for Windows, Linux and MacOS at the following link: [https://codex.cro.st.com/file/showfiles.php?group_id=8034](https://codex.cro.st.com/file/showfiles.php?group_id=8034).
+The toolchain can be downloaded for Windows, Linux and MacOS at the following link: [https://www.st.com/content/st_com/en/products/development-tools/software-development-tools/sensor-software-development-tools/ispu-toolchain.html](https://www.st.com/content/st_com/en/products/development-tools/software-development-tools/sensor-software-development-tools/ispu-toolchain.html).
 
 The toolchain must be extracted from the downloaded archive to any folder on the system. The *bin* folder inside the installed toolchain must be added to the PATH environment variable as follows:
 
