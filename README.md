@@ -16,9 +16,8 @@ The toolchain must be extracted from the downloaded archive to any folder on the
 
 * On Windows:
 
-  * Open the Start search, type "env" and choose "Edit the system environment variables".
-  * Click on the "Environment Variables…" button.
-  * Under the "System Variables" section, find the row with "Path" in the "Variable" column, select it and click "Edit...".
+  * Open the Start search, type "env" and choose "Edit environment variables for your account".
+  * Under the "User variables" section, find the row with "Path" in the "Variable" column, select it and click "Edit...".
   * Click on the "Browse..." button, browse into the folder where the toolchain is installed, select the *bin* folder and click "OK".
   * Close all remaining windows by clicking "OK".
   * Open a new terminal. The toolchain should now be available to be called from the command line (e.g., the *reisc-gcc* command should be found if the user tries to run it).
@@ -30,7 +29,7 @@ The toolchain must be extracted from the downloaded archive to any folder on the
     ```shell
     export PATH=$PATH":/path/to/toolchain/bin"
     ```
-    
+
   * Open a new terminal. The toolchain should now be available to be called from the command line (e.g., the *reisc-gcc* command should be found if the user tries to run it).
 
 Once the toolchain is installed, in order to build a project, the user must enter the *stred/make* directory inside the project and run *make*. Enjoy.
