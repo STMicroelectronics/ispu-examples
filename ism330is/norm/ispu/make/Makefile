@@ -2,7 +2,7 @@ CC = reisc-gcc
 OBJ_COPY = reisc-objcopy
 OBJ_DUMP = reisc-objdump
 SIZE_REISC = reisc-size
-STRED_GEN = stred_gen
+ISPU_GEN = ispu_gen
 
 MKDIR = mkdir -p
 RMDIR = rm -rf
@@ -22,19 +22,19 @@ ifeq ($(OS),Windows_NT)
 endif
 
 CFLAGS = -mcpu=reiscl -Os -specs=nano.specs -ffunction-sections -fdata-sections -Wl,--gc-sections -mfp32-format=ieee
-INCS = -I../stred_utils
+INCS = -I../ispu_utils
 
-SRC = ../stred_utils/crt0.S ../src/main.c
+SRC = ../ispu_utils/crt0.S ../src/main.c
 
 OUTDIR = bin
-NAME = stred
+NAME = ispu
 
 build: $(SRC) $(OUTDIR) Makefile
-	$(CC) $(CFLAGS) -o $(OUTDIR)/$(NAME) $(SRC) -T ../stred_utils/boot.ld $(INCS)
+	$(CC) $(CFLAGS) -o $(OUTDIR)/$(NAME) $(SRC) -T ../ispu_utils/boot.ld $(INCS)
 	$(SIZE_REISC) $(OUTDIR)/$(NAME)
 	$(OBJ_COPY) -O srec $(OUTDIR)/$(NAME) $(OUTDIR)/$(NAME).srec
-	$(STRED_GEN) -b -c -s ../conf.txt -d ism330is -n stred_conf $(OUTDIR)/$(NAME).srec > $(OUTDIR)/$(NAME).h
-	$(STRED_GEN) -b -s ../conf.txt -d ism330is -n stred_conf $(OUTDIR)/$(NAME).srec > $(OUTDIR)/$(NAME).ucf
+	$(ISPU_GEN) -b -c -s ../conf.txt -d ism330is -n ispu_conf $(OUTDIR)/$(NAME).srec > $(OUTDIR)/$(NAME).h
+	$(ISPU_GEN) -b -s ../conf.txt -d ism330is -n ispu_conf $(OUTDIR)/$(NAME).srec > $(OUTDIR)/$(NAME).ucf
 
 $(OUTDIR):
 	$(MKDIR) $(OUTDIR)

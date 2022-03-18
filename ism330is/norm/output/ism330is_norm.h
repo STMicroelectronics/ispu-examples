@@ -1,7 +1,7 @@
 /* Automatically generated STRed-ISPU header file. */
 
-#ifndef _STRED_CONF_H_
-#define _STRED_CONF_H_
+#ifndef _ISPU_CONF_H_
+#define _ISPU_CONF_H_
 
 #ifdef __cplusplus
 extern "C" {
@@ -22,7 +22,7 @@ typedef struct {
 } ucf_line_t;
 #endif
 
-const ucf_line_t stred_conf[] = {
+const ucf_line_t ispu_conf[] = {
 	{ .op = MEMS_UCF_OP_WRITE, .address = 0x01, .data = 0x02 },
 	{ .op = MEMS_UCF_OP_WRITE, .address = 0x01, .data = 0x00 },
 	{ .op = MEMS_UCF_OP_WRITE, .address = 0x01, .data = 0x80 },

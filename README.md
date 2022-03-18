@@ -1,6 +1,6 @@
 ## 1 - Introduction
 
-The *stred* software package provides template and example projects and libraries for MEMS devices embedding the STRed-ISPU (intelligent sensor processing unit).
+The *ispu* software package provides template and example projects and libraries for MEMS devices embedding the STRed-ISPU (intelligent sensor processing unit).
 
 Each project can be built using the command line (make) or any Eclipse based IDE, including STM32CubeIDE, provided that the STRed-ISPU plugins are installed.
 
@@ -32,7 +32,7 @@ The toolchain must be extracted from the downloaded archive to any folder on the
 
   * Open a new terminal. The toolchain should now be available to be called from the command line (e.g., the *reisc-gcc* command should be found if the user tries to run it).
 
-Once the toolchain is installed, in order to build a project, the user must enter the *stred/make* directory inside the project and run *make*. Enjoy.
+Once the toolchain is installed, in order to build a project, the user must enter the *ispu/make* directory inside the project and run *make*. Enjoy.
 
 ## 3 - Eclipse
 
