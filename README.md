@@ -40,7 +40,7 @@ In order to build a project using an Eclipse based IDE, the STRed-ISPU plugins m
 
 If an Eclipse based IDE is not already available, please download and install the "Eclipse IDE for Embedded C/C++ Developers" from [https://www.eclipse.org](https://www.eclipse.org).
 
-In order to install the plugins, from the main menu, go to "Help", click on "Install New Software...", click on "Add…", insert the URL corresponding to the operating system used in the "Location" field and click the “Add" button. Then, select all the items, click on the "Next" button, accept the license terms and click on the "Finish" button.
+In order to install the plugins, from the main menu, go to "Help", click on "Install New Software...", click on "Add…", insert the URL corresponding to the operating system used in the "Location" field and click the “Add" button. Then, select all the items, click on the "Next" button, accept the license terms and click on the "Finish" button. When prompted, restart the IDE to complete the installation.
 
 The URL to use is:
 
@@ -48,7 +48,7 @@ The URL to use is:
 * On Linux: [https://sw-center.st.com/mems/ispu/stred_ispu_repository_linux](https://sw-center.st.com/mems/ispu/stred_ispu_repository_linux)
 * On MacOS: [https://sw-center.st.com/mems/ispu/stred_ispu_repository_macos](https://sw-center.st.com/mems/ispu/stred_ispu_repository_macos)
 
-Once the plugins are installed, in order to build a project, the user must go to "File", click on "Import...". Under "General" select "Existing Project into Workspace", click on the "Next" button, click on the "Browse" button, select the folder containing the project and click on the "Finish" button. The project is now imported and can be built. Enjoy.
+Once the plugins are installed, in order to build a project, the user must go to "File", click on "Import...". Under "General" select "Existing Project into Workspace", click on the "Next" button, click on the "Browse" button, select the folder containing the project (*ispu/eclipse* directory) and click on the "Finish" button. The project is now imported and can be built. Enjoy.
 
 ------
 
