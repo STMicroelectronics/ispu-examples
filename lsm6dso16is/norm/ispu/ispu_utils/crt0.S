@@ -49,7 +49,7 @@ _interrupt_table:
 	jpia algo_27			; interrupt_handler28				0x70
 	jpia algo_28			; interrupt_handler29				0x74
 	jpia algo_29			; interrupt_handler30				0x78
-	jpia overrun_handler		; interrupt_handler31				0x7c
+	jpia reserved			; interrupt_handler31				0x7c
 	jpia algo_00_init		; first occurrence of algo_00			0x80
 	jpia algo_01_init		; first occurrence of algo_01			0x84
 	jpia algo_02_init		; first occurrence of algo_02			0x88
@@ -132,8 +132,6 @@ init_data_end:
 ; if not defined elsewhere use this ones
 	define_weak_label _start
 _start:
-	movw	%r0, #-1
-	stw	[STRED_GLB_CALL_EN], %r0		; enable all interrupts
 	jli	main
 	jli exit
 stpclk:	stop_and_wait_start_pulse
@@ -169,7 +167,7 @@ stpclk:	stop_and_wait_start_pulse
 	define_weak_function	algo_27			; interrupt_handler28				0x70
 	define_weak_function	algo_28			; interrupt_handler29				0x74
 	define_weak_function	algo_29			; interrupt_handler30				0x78
-	define_weak_function	overrun_handler		; interrupt_handler31				0x7c
+	define_weak_function	reserved		; interrupt_handler31				0x7c
 	define_weak_function	algo_00_init		; first occurrence of interrupt_handler1	0x48
 	define_weak_function	algo_01_init		; first occurrence of interrupt_handler2	0x4c
 	define_weak_function	algo_02_init		; first occurrence of interrupt_handler3	0x50

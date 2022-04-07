@@ -36,13 +36,16 @@ int main(void)
 	status = status | 0x04;
 	cast_uint8_t(STRED_STATUS) = status;
 
+	// enable algorithms interrupt request generation
+	cast_uint8_t(STRED_GLB_CALL_EN) = 0x01;
+
 	while (1) {
 		stop_and_wait_start_pulse;
 
 		// reset status registers and interrupts
 		int_status = 0;
-		cast_uint8_t(STRED_INT_STATUS) = 0x00;
-		cast_uint8_t(STRED_INT_PIN) = 0x00;
+		cast_uint32_t(STRED_INT_STATUS) = 0;
+		cast_uint8_t(STRED_INT_PIN) = 0;
 
 		// get all the algorithms to run in this time slot
 		cast_uint32_t(STRED_CALL_EN) = cast_uint32_t(STRED_ALGO) << 1;
