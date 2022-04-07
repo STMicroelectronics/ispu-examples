@@ -24,6 +24,62 @@ The *ispu* folder contains:
 * ***make***: folder containing the makefile for building using the command line.
 * ***eclipse***: folder containing the Eclipse project.
 
+## 3 - Output data format definition
+
+Since the format of the output data written to the STRED_DOUT registers depends on the specific user code, STMicroelectronics tools (e.g., Unicleo-GUI) utilize JSON files to define the output data format with a specific syntax.
+
+An "output" key must be defined at the highest level of the JSON structure. The "output" key must contain an array. Each element of the array must describe one output. Each element must have a "name" key, a "type" key and, optionally, a "size" key:
+
+- The value of the "name" key can be any string defining a label for the element.
+
+- The value of the "type" key must be a string representing one of the following data types:
+  - uint8_t
+  - int8_t
+  - uint16_t
+  - int16_t
+  - uint32_t
+  - int32_t
+  - float
+  - char
+- If the output is an array, the value of the "size" key must be integer representing the array size.
+
+For example, supposing that the user code copies the accelerometer raw values to STRED_DOUT_00, STRED_DOUT_01 and STRED_DOUT_02 registers, the JSON file below defines three elements containing the three axes of the accelerometer in LSB, written to the output registers as 16-bit words in two's complement (int16_t data type).
+
+```json
+{
+  "output":
+  [
+    {
+      "name": "Acc x [LSB]",
+      "type": "int16_t"
+    },
+    {
+      "name": "Acc y [LSB]",
+      "type": "int16_t"
+    },
+    {
+      "name": "Acc z [LSB]",
+      "type": "int16_t"
+    }
+  ]
+}
+```
+
+An equivalent definition can be achieved by defining one single element as an array of size three.
+
+```json
+{
+  "output":
+  [
+    {
+      "name": "Acc [LSB]",
+      "type": "int16_t",
+      "size": 3
+    }
+  ]
+}
+```
+
 ------
 
 **More Information: [http://www.st.com](http://st.com/MEMS)**
