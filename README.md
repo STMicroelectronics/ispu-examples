@@ -1,14 +1,14 @@
 ## 1 - Introduction
 
-The *ispu* software package provides template and example projects and libraries for MEMS devices embedding the STRed-ISPU (intelligent sensor processing unit).
+The *ispu* software package provides template and example projects and libraries for MEMS devices embedding the ISPU (intelligent sensor processing unit).
 
-Each project can be built using the command line (make) or any Eclipse based IDE, including STM32CubeIDE, provided that the STRed-ISPU plugins are installed.
+Each project can be built using the command line (make) or any Eclipse based IDE, including STM32CubeIDE, provided that the ISPU plugins are installed.
 
 Prebuilt files containing the ready to use device configuration are available in the *output* folder of each example project. For the examples related to STMicroelectronics libraries, also the library in binary format is available to be integrated in other projects based on user needs.
 
 ## 2 - Command line
 
-In order to build a project using the command line, the STRed-ISPU toolchain must be installed on the system. Besides the toolchain, the *make* build tool must be installed.
+In order to build a project using the command line, the ISPU toolchain must be installed on the system. Besides the toolchain, the *make* build tool must be installed.
 
 The toolchain can be downloaded for Windows, Linux and MacOS at the following link: [https://www.st.com/content/st_com/en/products/development-tools/software-development-tools/sensor-software-development-tools/ispu-toolchain.html](https://www.st.com/content/st_com/en/products/development-tools/software-development-tools/sensor-software-development-tools/ispu-toolchain.html).
 
@@ -36,7 +36,7 @@ Once the toolchain is installed, in order to build a project, the user must ente
 
 ## 3 - Eclipse
 
-In order to build a project using an Eclipse based IDE, the STRed-ISPU plugins must be installed into the IDE that the user desires to use.
+In order to build a project using an Eclipse based IDE, the ISPU plugins must be installed into the IDE that the user desires to use.
 
 If an Eclipse based IDE is not already available, please download and install the "Eclipse IDE for Embedded C/C++ Developers" from [https://www.eclipse.org](https://www.eclipse.org).
 
@@ -44,9 +44,9 @@ In order to install the plugins, from the main menu, go to "Help", click on "Ins
 
 The URL to use is:
 
-* On Windows: [https://sw-center.st.com/mems/ispu/stred_ispu_repository_win](https://sw-center.st.com/mems/ispu/stred_ispu_repository_win)
-* On Linux: [https://sw-center.st.com/mems/ispu/stred_ispu_repository_linux](https://sw-center.st.com/mems/ispu/stred_ispu_repository_linux)
-* On MacOS: [https://sw-center.st.com/mems/ispu/stred_ispu_repository_macos](https://sw-center.st.com/mems/ispu/stred_ispu_repository_macos)
+* On Windows: [https://sw-center.st.com/mems/ispu/ispu_repository_win](https://sw-center.st.com/mems/ispu/ispu_repository_win)
+* On Linux: [https://sw-center.st.com/mems/ispu/ispu_repository_linux](https://sw-center.st.com/mems/ispu/ispu_repository_linux)
+* On MacOS: [https://sw-center.st.com/mems/ispu/ispu_repository_macos](https://sw-center.st.com/mems/ispu/ispu_repository_macos)
 
 Once the plugins are installed, in order to build a project, the user must go to "File", click on "Import...". Under "General" select "Existing Project into Workspace", click on the "Next" button, click on the "Browse" button, select the folder containing the project (*ispu/eclipse* directory) and click on the "Finish" button. The project is now imported and can be built. Enjoy.
 

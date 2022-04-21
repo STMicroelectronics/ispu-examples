@@ -1,8 +1,8 @@
 ## 1 - Introduction
 
-This is a template for creating a new project for STRed-ISPU.
+This is a template for creating a new project for ISPU.
 
-The *ispu* folder may be copied by itself (no dependencies other than the CLI toolchain or IDE environment that must be installed) and used as a starting blank project to implement any solution running on STRed-ISPU.
+The *ispu* folder may be copied by itself (no dependencies other than the CLI toolchain or IDE environment that must be installed) and used as a starting blank project to implement any solution running on ISPU.
 
 
 ## 2 - Structure and how to use
@@ -26,7 +26,7 @@ The *ispu* folder contains:
 
 ## 3 - Output data format definition
 
-Since the format of the output data written to the STRED_DOUT registers depends on the specific user code, STMicroelectronics tools (e.g., Unicleo-GUI) utilize JSON files to define the output data format with a specific syntax.
+Since the format of the output data written to the ISPU_DOUT registers depends on the specific user code, STMicroelectronics tools (e.g., Unicleo-GUI) utilize JSON files to define the output data format with a specific syntax.
 
 An "output" key must be defined at the highest level of the JSON structure. The "output" key must contain an array. Each element of the array must describe one output. Each element must have a "name" key, a "type" key and, optionally, a "size" key:
 
@@ -43,7 +43,7 @@ An "output" key must be defined at the highest level of the JSON structure. The 
   - char
 - If the output is an array, the value of the "size" key must be integer representing the array size.
 
-For example, supposing that the user code copies the accelerometer raw values to STRED_DOUT_00, STRED_DOUT_01 and STRED_DOUT_02 registers, the JSON file below defines three elements containing the three axes of the accelerometer in LSB, written to the output registers as 16-bit words in two's complement (int16_t data type).
+For example, supposing that the user code copies the accelerometer raw values to ISPU_DOUT_00, ISPU_DOUT_01 and ISPU_DOUT_02 registers, the JSON file below defines three elements containing the three axes of the accelerometer in LSB, written to the output registers as 16-bit words in two's complement (int16_t data type).
 
 ```json
 {
