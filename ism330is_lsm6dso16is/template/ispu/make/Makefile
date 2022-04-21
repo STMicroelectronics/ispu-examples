@@ -33,8 +33,8 @@ build: $(SRC) $(OUTDIR) Makefile
 	$(CC) $(CFLAGS) -o $(OUTDIR)/$(NAME) $(SRC) -T ../ispu_utils/boot.ld $(INCS)
 	$(SIZE_REISC) $(OUTDIR)/$(NAME)
 	$(OBJ_COPY) -O srec $(OUTDIR)/$(NAME) $(OUTDIR)/$(NAME).srec
-	$(ISPU_GEN) -b -c -s ../conf.txt -d ism330is -n ispu_conf $(OUTDIR)/$(NAME).srec > $(OUTDIR)/$(NAME).h
-	$(ISPU_GEN) -b -s ../conf.txt -d ism330is -n ispu_conf $(OUTDIR)/$(NAME).srec > $(OUTDIR)/$(NAME).ucf
+	$(ISPU_GEN) -b -c -s ../conf.txt -d imu_22 -n ispu_conf $(OUTDIR)/$(NAME).srec > $(OUTDIR)/$(NAME).h
+	$(ISPU_GEN) -b -s ../conf.txt -d imu_22 -n ispu_conf $(OUTDIR)/$(NAME).srec > $(OUTDIR)/$(NAME).ucf
 
 $(OUTDIR):
 	$(MKDIR) $(OUTDIR)
