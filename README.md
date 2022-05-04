@@ -46,7 +46,7 @@ The URL to use is:
 
 * On Windows: [https://sw-center.st.com/mems/ispu/ispu_repository_win](https://sw-center.st.com/mems/ispu/ispu_repository_win)
 * On Linux: [https://sw-center.st.com/mems/ispu/ispu_repository_linux](https://sw-center.st.com/mems/ispu/ispu_repository_linux)
-* On MacOS: [https://sw-center.st.com/mems/ispu/ispu_repository_mac](https://sw-center.st.com/mems/ispu/ispu_repository_mac)
+* On macOS: [https://sw-center.st.com/mems/ispu/ispu_repository_mac](https://sw-center.st.com/mems/ispu/ispu_repository_mac)
 
 Once the plugins are installed, in order to build a project, the user must go to "File", click on "Import...". Under "General" select "Existing Project into Workspace", click on the "Next" button, click on the "Browse" button, select the folder containing the project (*ispu/eclipse* directory) and click on the "Finish" button. The project is now imported and can be built. Enjoy.
 
