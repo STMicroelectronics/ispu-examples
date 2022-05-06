@@ -14,7 +14,7 @@ The outputs are as follows:
 
 ## 2 - Device orientation
 
-None.
+The accelerometer and gyroscope are mounted in ENU orientation.
 
 
 ## 3 - Interrupts
