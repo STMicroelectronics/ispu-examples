@@ -62,7 +62,7 @@ void __attribute__ ((signal)) algo_00(void)
 	cast_float(ISPU_DOUT_06) = out.quaternion[3];
 	cast_uint8_t(ISPU_DOUT_08) = mc_out.CalQuality;
 
-	int_status = int_status | 0x2;
+	int_status = int_status | 0x1;
 }
 
 int main(void)

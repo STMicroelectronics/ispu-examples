@@ -1134,7 +1134,7 @@ const ucf_line_t ispu_conf[] = {
 	{ .op = MEMS_UCF_OP_WRITE, .address = 0x0B, .data = 0x8B },
 	{ .op = MEMS_UCF_OP_WRITE, .address = 0x0B, .data = 0xF4 },
 	{ .op = MEMS_UCF_OP_WRITE, .address = 0x0B, .data = 0x17 },
-	{ .op = MEMS_UCF_OP_WRITE, .address = 0x0B, .data = 0x05 },
+	{ .op = MEMS_UCF_OP_WRITE, .address = 0x0B, .data = 0x06 },
 	{ .op = MEMS_UCF_OP_WRITE, .address = 0x0B, .data = 0x67 },
 	{ .op = MEMS_UCF_OP_WRITE, .address = 0x0B, .data = 0xBF },
 	{ .op = MEMS_UCF_OP_WRITE, .address = 0x0B, .data = 0x8B },
