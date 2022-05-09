@@ -21,29 +21,29 @@ void __attribute__ ((signal)) algo_00_init(void)
 	dtime = *((float *)&dt);
 
 	if (mmc != NULL)
-		MotionMC_DeInitialize(mmc);
+		MotionMC_deinitialize(mmc);
 
-	mmc = MotionMC_Initialize(MMC_HI_ONLY);
+	mmc = MotionMC_initialize(MMC_HI_ONLY);
 
 	if (mfx_9x != NULL)
 		MotionFX_deinitialize(mfx_9x);
 	mfx_9x = MotionFX_initialize(MFX_9X);
-	MotionFX_setOrientation(mfx_9x, "enu", "enu", "esu");
+	MotionFX_set_orientation(mfx_9x, "enu", "enu", "esu");
 	MotionFX_enable_gbias(mfx_9x, MFX_ENGINE_ENABLE);
 }
 
 void __attribute__ ((signal)) algo_00(void)
 {
-	MMC_Input_t mc_in;
-	MMC_Output_t mc_out;
+	MMC_input_t mc_in;
+	MMC_output_t mc_out;
 	MFX_input_t in;
 	MFX_output_t out;
 
-	mc_in.Mag[0] = cast_sint16_t(ISPU_ERAW_0) * MAG_SENS;
-	mc_in.Mag[1] = cast_sint16_t(ISPU_ERAW_1) * MAG_SENS;
-	mc_in.Mag[2] = cast_sint16_t(ISPU_ERAW_2) * MAG_SENS;
-	mc_in.DTime = dtime;
-	MotionMC_Update(mmc, &mc_out, &mc_in);
+	mc_in.mag[0] = cast_sint16_t(ISPU_ERAW_0) * MAG_SENS;
+	mc_in.mag[1] = cast_sint16_t(ISPU_ERAW_1) * MAG_SENS;
+	mc_in.mag[2] = cast_sint16_t(ISPU_ERAW_2) * MAG_SENS;
+	mc_in.dtime = dtime;
+	MotionMC_update(mmc, &mc_out, &mc_in);
 
 	in.acc[0] = cast_sint16_t(ISPU_ARAW_X) * ACC_SENS;
 	in.acc[1] = cast_sint16_t(ISPU_ARAW_Y) * ACC_SENS;
@@ -51,16 +51,16 @@ void __attribute__ ((signal)) algo_00(void)
 	in.gyro[0] = cast_sint16_t(ISPU_GRAW_X) * GYR_SENS;
 	in.gyro[1] = cast_sint16_t(ISPU_GRAW_Y) * GYR_SENS;
 	in.gyro[2] = cast_sint16_t(ISPU_GRAW_Z) * GYR_SENS;
-	in.mag[0] = mc_in.Mag[0] - mc_out.HI_Bias[0];
-	in.mag[1] = mc_in.Mag[1] - mc_out.HI_Bias[1];
-	in.mag[2] = mc_in.Mag[2] - mc_out.HI_Bias[2];
+	in.mag[0] = mc_in.mag[0] - mc_out.HI_bias[0];
+	in.mag[1] = mc_in.mag[1] - mc_out.HI_bias[1];
+	in.mag[2] = mc_in.mag[2] - mc_out.HI_bias[2];
 	MotionFX_update(mfx_9x, &out, &in, dtime);
 
 	cast_float(ISPU_DOUT_00) = out.quaternion[0];
 	cast_float(ISPU_DOUT_02) = out.quaternion[1];
 	cast_float(ISPU_DOUT_04) = out.quaternion[2];
 	cast_float(ISPU_DOUT_06) = out.quaternion[3];
-	cast_uint8_t(ISPU_DOUT_08) = mc_out.CalQuality;
+	cast_uint8_t(ISPU_DOUT_08) = mc_out.cal_quality;
 
 	int_status = int_status | 0x1;
 }

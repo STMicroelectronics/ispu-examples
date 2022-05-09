@@ -17,29 +17,29 @@ void __attribute__ ((signal)) algo_00_init(void)
 	dtime = *((float *)&dt);
 
 	if (mmc != NULL)
-		MotionMC_DeInitialize(mmc);
+		MotionMC_deinitialize(mmc);
 
-	mmc = MotionMC_Initialize(MMC_HI_ONLY);
+	mmc = MotionMC_initialize(MMC_HI_ONLY);
 }
 
 void __attribute__ ((signal)) algo_00(void)
 {
-	MMC_Input_t mc_in;
-	MMC_Output_t mc_out;
+	MMC_input_t mc_in;
+	MMC_output_t mc_out;
 
-	mc_in.Mag[0] = cast_sint16_t(ISPU_ERAW_0) * MAG_SENS;
-	mc_in.Mag[1] = cast_sint16_t(ISPU_ERAW_1) * MAG_SENS;
-	mc_in.Mag[2] = cast_sint16_t(ISPU_ERAW_2) * MAG_SENS;
-	mc_in.DTime = dtime;
-	MotionMC_Update(mmc, &mc_out, &mc_in);
+	mc_in.mag[0] = cast_sint16_t(ISPU_ERAW_0) * MAG_SENS;
+	mc_in.mag[1] = cast_sint16_t(ISPU_ERAW_1) * MAG_SENS;
+	mc_in.mag[2] = cast_sint16_t(ISPU_ERAW_2) * MAG_SENS;
+	mc_in.dtime = dtime;
+	MotionMC_update(mmc, &mc_out, &mc_in);
 
-	cast_float(ISPU_DOUT_00) = mc_in.Mag[0] - mc_out.HI_Bias[0];
-	cast_float(ISPU_DOUT_02) = mc_in.Mag[1] - mc_out.HI_Bias[1];
-	cast_float(ISPU_DOUT_04) = mc_in.Mag[2] - mc_out.HI_Bias[2];
-	cast_float(ISPU_DOUT_06) = mc_out.HI_Bias[0];
-	cast_float(ISPU_DOUT_08) = mc_out.HI_Bias[1];
-	cast_float(ISPU_DOUT_10) = mc_out.HI_Bias[2];
-	cast_uint8_t(ISPU_DOUT_12) = mc_out.CalQuality;
+	cast_float(ISPU_DOUT_00) = mc_in.mag[0] - mc_out.HI_bias[0];
+	cast_float(ISPU_DOUT_02) = mc_in.mag[1] - mc_out.HI_bias[1];
+	cast_float(ISPU_DOUT_04) = mc_in.mag[2] - mc_out.HI_bias[2];
+	cast_float(ISPU_DOUT_06) = mc_out.HI_bias[0];
+	cast_float(ISPU_DOUT_08) = mc_out.HI_bias[1];
+	cast_float(ISPU_DOUT_10) = mc_out.HI_bias[2];
+	cast_uint8_t(ISPU_DOUT_12) = mc_out.cal_quality;
 
 	int_status = int_status | 0x1;
 }
