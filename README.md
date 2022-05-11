@@ -10,7 +10,7 @@ Prebuilt files containing the ready to use device configuration are available in
 
 In order to build a project using the command line, the ISPU toolchain must be installed on the system. Besides the toolchain, the *make* build tool must be installed.
 
-The toolchain can be downloaded for Windows, Linux and MacOS at the following link: [https://www.st.com/content/st_com/en/products/development-tools/software-development-tools/sensor-software-development-tools/ispu-toolchain.html](https://www.st.com/content/st_com/en/products/development-tools/software-development-tools/sensor-software-development-tools/ispu-toolchain.html).
+The toolchain can be downloaded for Windows, Linux and macOS at the following link: [https://www.st.com/content/st_com/en/products/development-tools/software-development-tools/sensor-software-development-tools/ispu-toolchain.html](https://www.st.com/content/st_com/en/products/development-tools/software-development-tools/sensor-software-development-tools/ispu-toolchain.html).
 
 The toolchain must be extracted from the downloaded archive to any folder on the system. The *bin* folder inside the installed toolchain must be added to the PATH environment variable as follows:
 
@@ -22,7 +22,7 @@ The toolchain must be extracted from the downloaded archive to any folder on the
   * Close all remaining windows by clicking "OK".
   * Open a new terminal. The toolchain should now be available to be called from the command line (e.g., the *reisc-gcc* command should be found if the user tries to run it).
 
-* On Linux and MacOS:
+* On Linux and macOS:
 
   * Add to your ".bashrc" or equivalent shell startup file the following line:
 
