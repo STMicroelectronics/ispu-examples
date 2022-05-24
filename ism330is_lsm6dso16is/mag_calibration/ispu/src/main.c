@@ -14,7 +14,7 @@ static void *mmc;
 void __attribute__ ((signal)) algo_00_init(void)
 {
 	uint32_t dt = ((uint32_t)cast_uint16_t(ISPU_DTIME_1) << 16) | cast_uint16_t(ISPU_DTIME_0);
-	dtime = *((float *)&dt);
+	dtime = *((float *)&dt) * 2.0f;
 
 	if (mmc != NULL)
 		MotionMC_deinitialize(mmc);
