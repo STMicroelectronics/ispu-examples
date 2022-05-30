@@ -40,7 +40,7 @@ In order to build a project using an Eclipse based IDE, the ISPU plugins must be
 
 If an Eclipse based IDE is not already available, please download and install the "Eclipse IDE for Embedded C/C++ Developers" from [https://www.eclipse.org](https://www.eclipse.org).
 
-In order to install the plugins, from the main menu, go to "Help", click on "Install New Software...", click on "Add…", insert the URL corresponding to the operating system used in the "Location" field and click the “Add" button. Then, select all the items, click on the "Next" button, accept the license terms and click on the "Finish" button. When prompted, restart the IDE to complete the installation.
+In order to install the plugins, from the main menu, go to "Help", click on "Install New Software...", click on "Add...", insert the URL corresponding to the operating system used in the "Location" field and click the "Add" button. Then, select all the items, click on the "Next" button, accept the license terms and click on the "Finish" button. When prompted, restart the IDE to complete the installation.
 
 The URL to use is:
 
