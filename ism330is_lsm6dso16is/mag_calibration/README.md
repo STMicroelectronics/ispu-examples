@@ -17,6 +17,11 @@ The outputs are as follows:
 * Magnetometer y-axis offset [uT/50] as float mapped starting from ISPU_DOUT_08_L (20h)
 * Magnetometer z-axis offset [uT/50] as float mapped starting from ISPU_DOUT_10_L (24h)
 * Magnetometer calibration level as uint8_t mapped starting from ISPU_DOUT_12_L (28h)
+  * 0 is *unknown*
+  * 1 is *poor*
+  * 2 is *good*
+  * 3 is *best*
+
 
 The calibration procedure requires rotating the device for acquiring magnetometer samples at different orientations.
 

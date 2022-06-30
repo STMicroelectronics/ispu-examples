@@ -18,6 +18,11 @@ The outputs are as follows:
 * Accelerometer y-axis scale factor as float mapped starting from ISPU_DOUT_14_L (2Ch)
 * Accelerometer z-axis scale factor as float mapped starting from ISPU_DOUT_16_L (30h)
 * Accelerometer calibration level as uint8 mapped starting from ISPU_DOUT_18_L (34h)
+  * 0 is *unknown*
+  * 1 is *poor*
+  * 2 is *ok*
+  * 3 is *good*
+
 
 The calibration procedure requires acquiring the accelerometer samples at six different orientations with the device steady for a couple of seconds. The six positions can be with every axis towards the ceiling and the ground such that each axis senses about +1 g or -1 g.
 

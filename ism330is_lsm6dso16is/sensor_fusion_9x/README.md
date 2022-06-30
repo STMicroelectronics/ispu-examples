@@ -15,6 +15,11 @@ The outputs are as follows:
 * Quaternion z-axis as float mapped starting from ISPU_DOUT_04_L (18h)
 * Quaternion scalar component as float mapped starting from ISPU_DOUT_06_L (1Ch)
 * Magnetometer calibration level as uint8_t mapped starting from ISPU_DOUT_08_L (20h)
+  * 0 is *unknown*
+  * 1 is *poor*
+  * 2 is *good*
+  * 3 is *best*
+
 
 
 ## 2 - Device orientation
