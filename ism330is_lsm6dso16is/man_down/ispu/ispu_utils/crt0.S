@@ -18,7 +18,7 @@
 ********************************************************************************/
 _startup:
 _interrupt_table:
-	jpia boot			; the first vector is is the reset vector	0x00
+	jpia boot			; the first vector is the reset vector	0x00
 	jpia algo_00			; interrupt_handler1				0x04
 	jpia algo_01			; interrupt_handler2				0x08
 	jpia algo_02			; interrupt_handler3				0x0c
