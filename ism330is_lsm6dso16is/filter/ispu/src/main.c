@@ -81,7 +81,6 @@ int main(void)
 		cast_uint32_t(ISPU_INT_STATUS) = int_status;
 		cast_uint8_t(ISPU_INT_PIN) = (((int_status & cast_uint32_t(ISPU_INT1_CTRL)) > 0) << 0) |
 			(((int_status & cast_uint32_t(ISPU_INT2_CTRL)) > 0) << 1);
-
 	}
 }
 

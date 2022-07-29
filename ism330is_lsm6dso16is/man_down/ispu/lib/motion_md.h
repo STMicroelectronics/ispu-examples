@@ -115,7 +115,7 @@ void MotionMD_set_configuration(MMD_conf_t *conf);
  * @brief  Run mandown algorithm.
  * @param  data_in pointer to the structure containing the input data
  * @param  data_out pointer to the enum containing the output data
- * @retval none 
+ * @retval none
  */
 void MotionMD_update(MMD_output_t *data_out, MMD_input_t *data_in);
 

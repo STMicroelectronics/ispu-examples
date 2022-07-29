@@ -71,7 +71,7 @@ typedef struct
   float wrist_up_tilt_y_ths;       /* Wrist up tilt threshold on y-axis [g] */
   uint16_t wrist_up_tilt_t;        /* Wrist up tilt timer [# samples] */
   float wrist_up_discharge_ths;    /* Wrist up discharge threshold [g] */
-  
+
   float wrist_down_trigger_ths;    /* Wrist down trigger threshold [g] */
   uint16_t wrist_down_trigger_t;   /* Wrist down trigger timer [# samples] */
   float wrist_down_tilt_x_ths;     /* Wrist down tilt threshold on x-axis [g] */

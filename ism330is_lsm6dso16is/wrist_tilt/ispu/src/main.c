@@ -55,7 +55,7 @@ void __attribute__ ((signal)) algo_00(void)
 	in.acc[0] = cast_sint16_t(ISPU_ARAW_X) * ACC_SENS;
 	in.acc[1] = cast_sint16_t(ISPU_ARAW_Y) * ACC_SENS;
 	in.acc[2] = cast_sint16_t(ISPU_ARAW_Z) * ACC_SENS;
-	
+
 	MotionWT_update(&out, &in);
 
 	cast_float(ISPU_DOUT_00) = in.acc[0];
@@ -95,7 +95,6 @@ int main(void)
 		cast_uint32_t(ISPU_INT_STATUS) = int_status;
 		cast_uint8_t(ISPU_INT_PIN) = (((int_status & cast_uint32_t(ISPU_INT1_CTRL)) > 0) << 0) |
 			(((int_status & cast_uint32_t(ISPU_INT2_CTRL)) > 0) << 1);
-
 	}
 }
 
