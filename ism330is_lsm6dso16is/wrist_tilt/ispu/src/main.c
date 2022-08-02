@@ -32,7 +32,7 @@ void __attribute__ ((signal)) algo_00_init(void)
 	conf.wrist_up_en = 1;
 	conf.wrist_down_en = 1;
 
-	conf.wrist_up_trigger_ths = 0.2f,
+	conf.wrist_up_trigger_ths = 0.2f;
 	conf.wrist_up_trigger_t = 7; // @ 26 Hz
 	conf.wrist_up_tilt_x_ths = 0.5f;
 	conf.wrist_up_tilt_y_ths = -0.175f;
@@ -89,7 +89,8 @@ int main(void)
 		cast_uint32_t(ISPU_CALL_EN) = cast_uint32_t(ISPU_ALGO) << 1;
 
 		// wait for all algorithms execution
-		while (cast_uint32_t(ISPU_CALL_EN)) {}
+		while (cast_uint32_t(ISPU_CALL_EN))
+			;
 
 		// set status registers and generate interrupts
 		cast_uint32_t(ISPU_INT_STATUS) = int_status;

@@ -71,7 +71,8 @@ int main(void)
 		cast_uint32_t(ISPU_CALL_EN) = cast_uint32_t(ISPU_ALGO) << 1;
 
 		// wait for all algorithms execution
-		while (cast_uint32_t(ISPU_CALL_EN)) {}
+		while (cast_uint32_t(ISPU_CALL_EN))
+			;
 
 		// set status registers and generate interrupts
 		cast_uint32_t(ISPU_INT_STATUS) = int_status;

@@ -5,7 +5,7 @@ MEMORY
     RAM (arw) : ORIGIN = 0x00000, LENGTH = 8K	/* must be placed at zero */
     CTRL(arw) : ORIGIN = 0x06800, LENGTH = 1K	/* this is the control register space (SR_BASE parameter) */
     EREG(arw) : ORIGIN = 0x06900, LENGTH = 0x100	/* CTRL + 256 */
-    /* the system ROM space 64 KB must be split tnto two equal parts */
+    /* the system ROM space 64 KB must be split into two equal parts */
     ROM (rx) : ORIGIN = 0x10000, LENGTH = 32K	/* the ROM space */
 }
 
