@@ -1,6 +1,6 @@
 ## 1 - Introduction
 
-The *ispu* software package provides template and example projects and libraries for MEMS devices embedding the ISPU (intelligent sensor processing unit).
+The *Ispu* software package provides template and example projects and libraries for MEMS devices embedding the ISPU (intelligent sensor processing unit).
 
 Each project can be built using the command line (make) or any Eclipse based IDE, including STM32CubeIDE, provided that the ISPU plugins are installed.
 
