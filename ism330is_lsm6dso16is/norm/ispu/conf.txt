@@ -4,7 +4,7 @@ acc_mode high_performance
 
 ispu_irq_rate 26
 ispu_int1 enable
-ispu_sleep_int2 disable
+ispu_sleep_int2 enable
 ispu_latch disable
 
 algo 0 enable
