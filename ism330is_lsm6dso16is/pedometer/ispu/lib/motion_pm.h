@@ -1,21 +1,21 @@
 /**
- *******************************************************************************
- * @file    motion_pm.h
- * @author  MEMS Application Team
- * @version V1.0.0
- * @brief   Header for motion_pm module
- *******************************************************************************
- * @attention
- *
- * Copyright (c) 2022 STMicroelectronics.
- * All rights reserved.
- *
- * This software is licensed under terms that can be found in the LICENSE file
- * in the root directory of this software component.
- * If no LICENSE file comes with this software, it is provided AS-IS.
- *
- *******************************************************************************
- */
+  *******************************************************************************
+  * @file    motion_pm.h
+  * @author  MEMS Application Team
+  * @version V1.0.0
+  * @brief   Header for motion_pm module
+  *******************************************************************************
+  * @attention
+  *
+  * Copyright (c) 2022 STMicroelectronics.
+  * All rights reserved.
+  *
+  * This software is licensed under terms that can be found in the LICENSE file
+  * in the root directory of this software component.
+  * If no LICENSE file comes with this software, it is provided AS-IS.
+  *
+  *******************************************************************************
+  */
 
 /* Define to prevent recursive inclusion ------------------------------------ */
 #ifndef _MOTION_PM_H_
