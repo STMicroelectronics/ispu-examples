@@ -502,6 +502,8 @@ Ac 0B 05
 Ac 0B 01
 Ac 0B 63
 Ac 0B 00
+Ac 0B 1B
+Ac 0B 00
 Ac 0B 93
 Ac 0B 70
 Ac 0B 00
@@ -549,8 +551,6 @@ Ac 0B F4
 Ac 0B 17
 Ac 0B 00
 Ac 0B F8
-Ac 0B 00
-Ac 0B 00
 Ac 0B F4
 Ac 0B 27
 Ac 0B 0F
@@ -20484,12 +20484,12 @@ WAIT 5
 Ac 10 00
 Ac 0E 80
 Ac 15 00
-Ac 18 40
+Ac 18 30
 Ac 5E 02
 Ac 01 80
 Ac 02 01
 Ac 50 01
 Ac 70 01
 Ac 01 00
-Ac 10 4C
+Ac 10 3C
 
