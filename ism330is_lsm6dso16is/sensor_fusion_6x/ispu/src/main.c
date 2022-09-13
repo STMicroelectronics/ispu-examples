@@ -40,7 +40,6 @@ void __attribute__ ((signal)) algo_00_init(void)
 
 void __attribute__ ((signal)) algo_00(void)
 {
-	uint8_t status;
 	MFX_input_t in;
 	MFX_output_t out;
 
