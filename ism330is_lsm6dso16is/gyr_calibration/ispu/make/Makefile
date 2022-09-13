@@ -21,7 +21,7 @@ ifeq ($(OS),Windows_NT)
     NULL := $(shell $(RM) tmp)
 endif
 
-CFLAGS = -mcpu=reiscl -Os -specs=nano.specs -ffunction-sections -fdata-sections -Wl,--gc-sections -mfp32-format=ieee
+CFLAGS = -mcpu=reiscl -Os -specs=nano.specs -ffunction-sections -fdata-sections -Wl,--gc-sections -mfp32-format=ieee -Wall -Wextra -Wdouble-promotion -fno-strict-aliasing
 INCS = -I../ispu_utils -I../lib
 LDFLAGS = -L../lib -lMotionGC
 
