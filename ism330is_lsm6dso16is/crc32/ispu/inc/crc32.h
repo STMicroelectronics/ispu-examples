@@ -12,13 +12,13 @@
   ******************************************************************************
   */
 
-#ifndef _CRC32_H_
-#define _CRC32_H_
+#ifndef CRC32_H
+#define CRC32_H
 
 #include <stdint.h>
 
 void crc32_init(void);
-uint32_t crc32_run(uint8_t *in, uint16_t len);
+uint32_t crc32_run(const uint8_t *in, uint16_t len);
 
 #endif
 

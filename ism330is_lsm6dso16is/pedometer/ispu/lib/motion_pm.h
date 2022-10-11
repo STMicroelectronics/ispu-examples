@@ -18,8 +18,8 @@
   */
 
 /* Define to prevent recursive inclusion ------------------------------------ */
-#ifndef _MOTION_PM_H_
-#define _MOTION_PM_H_
+#ifndef MOTION_PM_H
+#define MOTION_PM_H
 
 #ifdef __cplusplus
 extern "C"

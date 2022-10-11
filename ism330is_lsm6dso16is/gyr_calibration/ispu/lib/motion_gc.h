@@ -19,8 +19,8 @@
   */
 
 /* Define to prevent recursive inclusion -------------------------------------*/
-#ifndef _MOTION_GC_H_
-#define _MOTION_GC_H_
+#ifndef MOTION_GC_H
+#define MOTION_GC_H
 
 #ifdef __cplusplus
 extern "C"

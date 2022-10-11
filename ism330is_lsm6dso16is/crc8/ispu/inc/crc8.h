@@ -12,13 +12,13 @@
   ******************************************************************************
   */
 
-#ifndef _CRC8_H_
-#define _CRC8_H_
+#ifndef CRC8_H
+#define CRC8_H
 
 #include <stdint.h>
 
 void crc8_init(void);
-uint8_t crc8_run(uint8_t *in, uint16_t len);
+uint8_t crc8_run(const uint8_t *in, uint16_t len);
 
 #endif
 

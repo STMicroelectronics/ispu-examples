@@ -12,10 +12,11 @@
   ******************************************************************************
   */
 
-#ifndef _PERIPHERALS_H_
-#define _PERIPHERALS_H_
+#ifndef PERIPHERALS_H
+#define PERIPHERALS_H
 
 #include <stdint.h>
+#include <stdbool.h>
 
 #define cast_uint32_t(add) (*((volatile uint32_t *)(add))) /* to read/write an unsigned 32 bit integer */
 #define cast_uint16_t(add) (*((volatile uint16_t *)(add))) /* to read/write an unsigned 16 bit integer */
@@ -27,7 +28,7 @@
 
 #define cast_float(add)    (*((volatile float *)(add)))    /* to read/write a float 32 bit value */
 
-#define stop_and_wait_start_pulse do { STOP_CLOCK; asm(""); } while (0)
+#define stop_and_wait_start_pulse do { STOP_CLOCK; asm(""); } while (false)
 
 extern volatile uint8_t STOP_CLOCK;
 

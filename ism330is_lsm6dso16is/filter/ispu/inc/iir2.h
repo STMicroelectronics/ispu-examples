@@ -12,8 +12,8 @@
   ******************************************************************************
   */
 
-#ifndef _IIR2_H_
-#define _IIR2_H_
+#ifndef IIR2_H
+#define IIR2_H
 
 struct iir2 {
 	float b[3];
