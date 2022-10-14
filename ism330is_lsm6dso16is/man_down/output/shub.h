@@ -12,10 +12,8 @@
   ******************************************************************************
   */
 
-/* Automatically generated sensor-hub header file. */
-
-#ifndef _SHUB_H_
-#define _SHUB_H_
+#ifndef SHUB_H
+#define SHUB_H
 
 #ifdef __cplusplus
 extern "C" {
@@ -23,20 +21,40 @@ extern "C" {
 
 #include <stdint.h>
 
-#ifndef MEMS_UCF_SHARED_TYPES
-#define MEMS_UCF_SHARED_TYPES
+#ifndef MEMS_UCF_EXT_SHARED_TYPES
+#define MEMS_UCF_EXT_SHARED_TYPES
 
-#define MEMS_UCF_OP_WRITE 0
-#define MEMS_UCF_OP_DELAY 1
+/*
+ * UCF extended format supports the following commands:
+ * - MEMS_UCF_OP_READ: read the register at the location specified by the
+ *   "address" field ("data" field is ignored
+ * - MEMS_UCF_OP_WRITE: write the value specified by the "data" field at the
+ *   location specified by the "address" field
+ * - MEMS_UCF_OP_DELAY: wait the number of milliseconds specified by the "data"
+ *   field ("address" field is ignored)
+ * - MEMS_UCF_OP_POLL_SET: poll the register at the location specified by the
+ *   "address" field until all the bits identified by the mask specified by the
+ *   "data" field are set to 1
+ * - MEMS_UCF_OP_POLL_RESET: poll the register at the location specified by the
+ *   "address" field until all the bits identified by the mask specified by the
+ *   "data" field are reset to 0
+ */
+
+#define MEMS_UCF_OP_READ       0
+#define MEMS_UCF_OP_WRITE      1
+#define MEMS_UCF_OP_DELAY      2
+#define MEMS_UCF_OP_POLL_SET   3
+#define MEMS_UCF_OP_POLL_RESET 4
 
 typedef struct {
 	uint8_t op;
 	uint8_t address;
 	uint8_t data;
-} ucf_line_t;
-#endif
+} ucf_line_ext_t;
 
-const ucf_line_t shub_conf[] = {
+#endif /* MEMS_UCF_EXT_SHARED_TYPES */
+
+static const ucf_line_ext_t shub_conf[] = {
 	{ .op = MEMS_UCF_OP_WRITE, .address = 0x10, .data = 0x40 },
 	// write [device 0xBA], 0x10 = 0x2E
 	{ .op = MEMS_UCF_OP_WRITE, .address = 0x01, .data = 0x40 },

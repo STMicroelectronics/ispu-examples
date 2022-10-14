@@ -12,8 +12,8 @@
   ******************************************************************************
   */
 
-#ifndef _ISPU_CONF_H_
-#define _ISPU_CONF_H_
+#ifndef ISPU_CONF_H
+#define ISPU_CONF_H
 
 #ifdef __cplusplus
 extern "C" {
@@ -54,7 +54,7 @@ typedef struct {
 
 #endif /* MEMS_UCF_EXT_SHARED_TYPES */
 
-const ucf_line_ext_t ispu_conf[] = {
+static const ucf_line_ext_t ispu_conf[] = {
 	{ .op = MEMS_UCF_OP_WRITE, .address = 0x01, .data = 0x02 },
 	{ .op = MEMS_UCF_OP_WRITE, .address = 0x01, .data = 0x00 },
 	{ .op = MEMS_UCF_OP_WRITE, .address = 0x01, .data = 0x80 },
