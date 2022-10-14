@@ -23,7 +23,6 @@
 
 #define ACC_SENS 0.000244f
 #define GYR_SENS 0.070f
-#define MAG_SENS 0.003f
 
 void __attribute__ ((signal)) algo_00_init(void);
 void __attribute__ ((signal)) algo_00(void);
