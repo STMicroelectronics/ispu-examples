@@ -1,0 +1,70 @@
+{
+  "output":
+  [
+    {
+      "name": "|DFT_00|",
+      "type": "float"
+    },
+    {
+      "name": "|DFT_01|",
+      "type": "float"
+    },
+    {
+      "name": "|DFT_02|",
+      "type": "float"
+    },
+    {
+      "name": "|DFT_03|",
+      "type": "float"
+    },
+    {
+      "name": "|DFT_04|",
+      "type": "float"
+    },
+    {
+      "name": "|DFT_05|",
+      "type": "float"
+    },
+    {
+      "name": "|DFT_06|",
+      "type": "float"
+    },
+    {
+      "name": "|DFT_07|",
+      "type": "float"
+    },
+    {
+      "name": "|DFT_08|",
+      "type": "float"
+    },
+    {
+      "name": "|DFT_09|",
+      "type": "float"
+    },
+    {
+      "name": "|DFT_10|",
+      "type": "float"
+    },
+    {
+      "name": "|DFT_11|",
+      "type": "float"
+    },
+    {
+      "name": "|DFT_12|",
+      "type": "float"
+    },
+    {
+      "name": "|DFT_13|",
+      "type": "float"
+    },
+    {
+      "name": "|DFT_14|",
+      "type": "float"
+    },
+    {
+      "name": "|DFT_15|",
+      "type": "float"
+    }
+  ]
+}
+
