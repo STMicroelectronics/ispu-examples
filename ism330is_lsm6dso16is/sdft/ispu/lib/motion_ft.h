@@ -29,7 +29,6 @@ extern "C"
 /* Includes ----------------------------------------------------------------- */
 #include <stdint.h>
 #include <stdbool.h>
-#include <complex.h>
 
 /** @addtogroup MIDDLEWARES
  *  @{
@@ -53,7 +52,6 @@ typedef float MFT_input_t;
 typedef struct
 {
   float *mag;    // FT magnitude
-  float *phase;  // FT phase
   uint16_t nfft; // FT length
 } MFT_output_t;
 

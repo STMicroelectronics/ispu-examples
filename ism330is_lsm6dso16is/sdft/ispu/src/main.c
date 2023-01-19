@@ -55,7 +55,6 @@ void __attribute__((signal)) algo_00(void)
 	MotionFT_update(mft, &data_out, data_in);
 
 	// Place magnitude of DFT in output registers
-	cast_float(ISPU_DOUT_00) = (float)data_in;
 	for (uint16_t i = 0u; i < data_out.nfft; i++) {
 		cast_float(ISPU_DOUT_00 + ((int16_t)i * 4)) = data_out.mag[i];
 	}
