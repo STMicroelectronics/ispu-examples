@@ -29,13 +29,11 @@ vertical-align: middle;
 <div class="col-sm-12 col-lg-8">
 <h2 id="introduction">1 - Introduction</h2>
 <p>This ISPU example implements the <em>Sliding Discrete Fourier
-Transform (SDFT)</em> algorithm, which efficiently computes the DFT on a
-sliding window using dynamic programming.</p>
+Transform (SDFT)</em> algorithm for computing the magnitude of the DFT
+components (from 0 Hz to 13 Hz) of the accelerometer z-axis over a
+sliding window of 32 samples.</p>
 <p>The accelerometer is configured in high-performance mode at 26
 Hz.</p>
-<p>NB: for demonstration purposes, only the accelerometer z-axis is used
-for computing the magnitude of 16 DFT components (from 0 Hz to 13
-Hz).</p>
 <p>The sdft library is provided as binary in the <em>ispu/lib</em>
 folder.</p>
 <p>The outputs are as follows:</p>
