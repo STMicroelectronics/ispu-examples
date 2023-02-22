@@ -42,9 +42,9 @@ extern "C"
 
 typedef struct
 {
-  uint16_t length; // Sample length of sliding window used for FT computation
-  float damp;      // Dampening factor to ensure stability, 0 ≤ r ≤ 1
-  bool use_norm;   // Apply scaling to FT of 1/length
+  uint16_t length; // Length of sliding window [#samples]
+  float damp;      // Dampening factor to ensure stability, 0 ≤ damp ≤ 1
+  bool use_norm;   // Apply scaling factor of 1/length
 } MFT_conf_t;
 
 typedef struct
@@ -54,8 +54,8 @@ typedef struct
 
 typedef struct
 {
-  float *mag;    // FT magnitude
-  uint16_t nfft; // FT length
+  float *mag;    // Magnitudes of FT coefficients
+  uint16_t nfft; // Number of FT coefficients
 } MFT_output_t;
 
 /**
@@ -74,7 +74,7 @@ typedef struct
 
 /**
  * @brief  Initialize the MotionFT engine
- * @param  conf FT configuration, damp ensures stability (0 < damp ≤ 1), norm scale result by 1/length
+ * @param  conf FT configuration
  * @retval pointer to the new algorithm instance
  */
 void *MotionFT_initialize(MFT_conf_t *conf);
@@ -87,7 +87,7 @@ void *MotionFT_initialize(MFT_conf_t *conf);
 void MotionFT_deinitialize(void *mft);
 
 /**
- * @brief  This function runs one step of the magnetometer calibration algorithm
+ * @brief  This function runs one step of the sliding DFT algorithm
  * @param  mft pointer to the algorithm instance
  * @param  data_out pointer to the structure containing the output data
  * @param  data_in pointer to the structure containing the input data
