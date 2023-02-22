@@ -47,7 +47,10 @@ typedef struct
   bool use_norm;   // Apply scaling to FT of 1/length
 } MFT_conf_t;
 
-typedef float MFT_input_t;
+typedef struct
+{
+  float sample; // Signal sample at time t
+} MFT_input_t;
 
 typedef struct
 {
@@ -90,7 +93,7 @@ void MotionFT_deinitialize(void *mft);
  * @param  data_in pointer to the structure containing the input data
  * @retval none
  */
-void MotionFT_update(void *mft, MFT_output_t *data_out, MFT_input_t data_in);
+void MotionFT_update(void *mft, MFT_output_t *data_out, MFT_input_t *data_in);
 
 /**
  * @brief  Get the library version

@@ -51,8 +51,8 @@ void __attribute__((signal)) algo_00(void)
 	(void)memset(&data_out, 0, sizeof(data_out));
 
 	// Compute real-time Fourier transform on Z-axis
-	data_in = (float)cast_sint16_t(ISPU_ARAW_Z) * ACC_SENS;
-	MotionFT_update(mft, &data_out, data_in);
+	data_in.sample = (float)cast_sint16_t(ISPU_ARAW_Z) * ACC_SENS;
+	MotionFT_update(mft, &data_out, &data_in);
 
 	// Place magnitude of DFT in output registers
 	for (uint16_t i = 0u; i < data_out.nfft; i++) {
