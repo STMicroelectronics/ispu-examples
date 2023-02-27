@@ -34,7 +34,7 @@ void __attribute__((signal)) algo_00_init(void)
 {
 	MFT_conf_t conf = {
 		.length = 32u,
-		.damp = 0.99f,
+		.damp = 1.0f,
 		.use_norm = true
 	};
 
