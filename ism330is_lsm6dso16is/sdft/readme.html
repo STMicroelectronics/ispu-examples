@@ -19,7 +19,7 @@ vertical-align: middle;
 }
 .display.math{display: block; text-align: center; margin: 0.5rem auto;}
 </style>
-  <link rel="stylesheet" href="../ispu/ism330is_lsm6dso16is/sdft//_htmresc/mini-st_2020.css" />
+  <link rel="stylesheet" href="../ispu/ism330is_lsm6dso16is/sdft/_htmresc/mini-st_2020.css" />
   <!--[if lt IE 9]>
     <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
   <![endif]-->
@@ -38,29 +38,15 @@ Hz.</p>
 folder.</p>
 <p>The outputs are as follows:</p>
 <ul>
-<li>|DFT_00| as float mapped starting from ISPU_DOUT_00_L (10h)</li>
-<li>|DFT_01| as float mapped starting from ISPU_DOUT_02_L (14h)</li>
-<li>|DFT_02| as float mapped starting from ISPU_DOUT_04_L (18h)</li>
-<li>|DFT_03| as float mapped starting from ISPU_DOUT_06_L (1Ch)</li>
-<li>|DFT_04| as float mapped starting from ISPU_DOUT_08_L (20h)</li>
-<li>|DFT_05| as float mapped starting from ISPU_DOUT_10_L (24h)</li>
-<li>|DFT_06| as float mapped starting from ISPU_DOUT_12_L (28h)</li>
-<li>|DFT_07| as float mapped starting from ISPU_DOUT_14_L (2Ch)</li>
-<li>|DFT_08| as float mapped starting from ISPU_DOUT_16_L (30h)</li>
-<li>|DFT_09| as float mapped starting from ISPU_DOUT_18_L (34h)</li>
-<li>|DFT_10| as float mapped starting from ISPU_DOUT_20_L (38h)</li>
-<li>|DFT_11| as float mapped starting from ISPU_DOUT_22_L (3Ch)</li>
-<li>|DFT_12| as float mapped starting from ISPU_DOUT_24_L (40h)</li>
-<li>|DFT_13| as float mapped starting from ISPU_DOUT_26_L (44h)</li>
-<li>|DFT_14| as float mapped starting from ISPU_DOUT_28_L (48h)</li>
-<li>|DFT_15| as float mapped starting from ISPU_DOUT_30_L (4Ch)</li>
+<li>DFT magnitude as an array of 16 float values mapped starting from
+ISPU_DOUT_00_L (10h) to ISPU_DOUT_30_L (4Ch)</li>
 </ul>
 <h2 id="device-orientation">2 - Device orientation</h2>
 <p>None.</p>
 <h2 id="interrupts">3 - Interrupts</h2>
-<p>The configuration generates an interrupt in INT1 when the absolute
-value of the DFT is computed on the current sliding window and available
-in the output registers.</p>
+<p>The configuration generates an interrupt in INT1 when the DFT
+magnitude is computed on the current sliding window and available in the
+output registers.</p>
 <hr />
 <p><strong>More Information: <a href="http://st.com/MEMS">http://www.st.com</a></strong></p>
 <p><strong>Copyright © 2022 STMicroelectronics</strong></p>
