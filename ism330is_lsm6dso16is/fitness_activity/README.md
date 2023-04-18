@@ -1,6 +1,6 @@
 ## 1 - Introduction
 
-This ISPU example implements the fitness activity solution based on the fusion of the accelerometer, the gyroscope and the pressure sensor data.
+This ISPU example implements the fitness activity solution based on the fusion of the accelerometer, gyroscope and pressure sensor data, which counts the repetitions of every exercize.
 
 The accelerometer and gyroscope are configured in low-power mode at 26 Hz.
 
