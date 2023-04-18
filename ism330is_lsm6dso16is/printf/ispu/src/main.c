@@ -34,8 +34,6 @@ void __attribute__ ((signal)) algo_00_init(void)
 
 void __attribute__ ((signal)) algo_00(void)
 {
-	cnt++;
-
 	if (cnt < 52u) {
 		(void)printf("This example uses the \"printf\"");
 	} else if (cnt < 104u) {
@@ -43,6 +41,10 @@ void __attribute__ ((signal)) algo_00(void)
 	} else if (cnt < 156u) {
 		(void)printf("This message loops every 6 seconds.");
 	} else {
+		// no action
+	}
+
+	if (++cnt == 156u) {
 		cnt = 0u;
 	}
 
@@ -62,7 +64,7 @@ int _write(int fd, const void *buf, size_t count)
 	}
 
 	(void)memcpy((char *)ISPU_DOUT_00, buf, bytes);
-	cast_char(ISPU_DOUT_00 + (int)bytes) = '\0';
+	cast_char(ISPU_DOUT_00 + (int32_t)bytes) = '\0';
 
 	return (int)bytes;
 }
