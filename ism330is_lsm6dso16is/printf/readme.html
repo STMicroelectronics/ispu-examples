@@ -1504,8 +1504,8 @@ overwrite the “_write” function in order to make the printf write to the
 output registers.</p>
 <p>The output is as follows:</p>
 <ul>
-<li>Message (max 63 characters) as char array mapped starting from
-ISPU_DOUT_00_L (10h)</li>
+<li>Message (max 64 characters including the null terminator) as char
+array mapped starting from ISPU_DOUT_00_L (10h)</li>
 </ul>
 <h2 id="device-orientation">2 - Device orientation</h2>
 <p>None.</p>

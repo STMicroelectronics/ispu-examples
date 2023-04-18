@@ -4,7 +4,7 @@ This ISPU example implements a looping message written to the output registers u
 
 The output is as follows:
 
-* Message (max 63 characters) as char array mapped starting from ISPU_DOUT_00_L (10h)
+* Message (max 64 characters including the null terminator) as char array mapped starting from ISPU_DOUT_00_L (10h)
 
 
 ## 2 - Device orientation
