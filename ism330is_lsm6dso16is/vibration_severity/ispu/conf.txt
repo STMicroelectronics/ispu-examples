@@ -1,4 +1,5 @@
 acc_odr 6667
+acc_fs 2
 acc_mode high_performance
 
 ispu_irq_rate 6667

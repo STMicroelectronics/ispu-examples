@@ -37,7 +37,7 @@ void __attribute__ ((signal)) algo_00_init(void)
 
 	MVS_conf_t conf = {
 		.axis = MVS_AXIS_Z,
-		.bw = MVS_HP_2HZ,
+		.bw = MVS_BW_2_1000_HZ,
 		.hp_en = 0,
 		.period = 1666,
 		.rms_update_period = 119

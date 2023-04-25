@@ -38,13 +38,25 @@ extern "C"
  */
 
 /* Exported types ----------------------------------------------------------- */
-enum { MVS_AXIS_X = 0, MVS_AXIS_Y = 1, MVS_AXIS_Z = 2 };
-enum { MVS_HP_2HZ = 0, MVS_HP_10HZ = 1 };
+enum
+{
+  MVS_AXIS_X = 0,
+  MVS_AXIS_Y = 1,
+  MVS_AXIS_Z = 2
+};
+
+enum
+{
+  MVS_BW_2_1000_HZ = 0,
+  MVS_BW_10_1000_HZ = 1,
+  MVS_BW_2_100_HZ = 2,
+  MVS_BW_10_100_HZ = 3
+};
 
 typedef struct
 {
   uint8_t axis;                /* Axis selection (x, y, or z) */
-  uint8_t bw;                  /* Bandpass filter low cutoff (2 Hz or 10 Hz) */
+  uint8_t bw;                  /* Bandpass filter bandwidth (2-1000 Hz, 10-1000 Hz, 2-100 Hz, 10-100 Hz) */
   uint8_t hp_en;               /* Additional hp filter (0: disable, 1: enable) */
   uint16_t period;             /* Period [# samples] */
   uint16_t rms_update_period;  /* Velocity RMS update period [# samples] */
@@ -79,8 +91,8 @@ typedef struct
 /* Exported functions ------------------------------------------------------- */
 
 /**
- * @brief  Initialize the MotionVS engine
- * @param  conf pointer to the structure containing the configuration
+ * @brief  Initialize the MotionVS engine.
+ * @param  conf pointer to the structure containing the configuration to set
  * @retval none
  */
 void MotionVS_initialize(MVS_conf_t *conf);
@@ -94,7 +106,7 @@ void MotionVS_initialize(MVS_conf_t *conf);
 void MotionVS_update(MVS_output_t *data_out, MVS_input_t *data_in);
 
 /**
-  * @brief  Get the library version
+  * @brief  Get the library version.
   * @param  version pointer to an array of 35 char
   * @retval number of characters in the version string
   */
