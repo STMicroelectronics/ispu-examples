@@ -83,7 +83,7 @@ typedef enum
 /* Exported functions ------------------------------------------------------- */
 
 /**
- * @brief  Initialize the MotionFA engine
+ * @brief  Initialize the MotionFA engine.
  * @param  wrist wrist code (left or right wrist)
  * @retval none
  */
@@ -98,7 +98,7 @@ void MotionFA_initialize(MFA_wrist_t wrist);
 void MotionFA_update(MFA_output_t *data_out, MFA_input_t *data_in);
 
 /**
- * @brief  Set sensor orientation, default orientation is ENU (x - east, y - north, z - up)
+ * @brief  Set sensor orientation, default orientation is ENU (x - east, y - north, z - up).
  * @param  acc_orientation string with reference to set
  * @param  gyr_orientation string with reference to set
  * @retval none
@@ -148,7 +148,7 @@ void MotionFA_overhead_enable(MFA_enable_t enable);
 void MotionFA_jack_enable(MFA_enable_t enable);
 
 /**
-  * @brief  Get the library version
+  * @brief  Get the library version.
   * @param  version pointer to an array of 35 char
   * @retval number of characters in the version string
   */
