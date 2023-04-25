@@ -100,9 +100,9 @@ void MotionTD_get_configuration(MTD_conf_t *conf);
 /**
  * @brief  Set the algorithm configuration.
  * @param  conf pointer to the structure containing the configuration to be set
- * @retval none
+ * @retval success flag [0: invalid configuration, 1: valid configuration]
  */
-void MotionTD_set_configuration(MTD_conf_t *conf);
+uint8_t MotionTD_set_configuration(MTD_conf_t *conf);
 
 /**
  * @brief  Run tap detection algorithm.
