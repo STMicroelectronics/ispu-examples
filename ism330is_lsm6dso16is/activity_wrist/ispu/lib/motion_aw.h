@@ -45,7 +45,7 @@ extern "C" {
 #define NUM_ACTIVITIES 10
 
 /* Exported types ------------------------------------------------------------*/
- typedef struct
+typedef struct
 {
   float AccX;           /* Acceleration in X axis in [g] */
   float AccY;           /* Acceleration in Y axis in [g] */

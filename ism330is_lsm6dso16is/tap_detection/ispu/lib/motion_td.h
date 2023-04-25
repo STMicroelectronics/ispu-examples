@@ -85,7 +85,7 @@ typedef struct {
 /* Exported functions ------------------------------------------------------- */
 
 /**
- * @brief  Initialize the MotionTD engine
+ * @brief  Initialize the MotionTD engine.
  * @retval none
  */
 void MotionTD_initialize(void);
@@ -113,7 +113,7 @@ uint8_t MotionTD_set_configuration(MTD_conf_t *conf);
 void MotionTD_update(MTD_output_t *data_out, MTD_input_t *data_in);
 
 /**
-  * @brief  Get the library version
+  * @brief  Get the library version.
   * @param  version pointer to an array of 35 char
   * @retval number of characters in the version string
   */
