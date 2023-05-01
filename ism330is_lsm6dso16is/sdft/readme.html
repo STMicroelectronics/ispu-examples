@@ -1498,28 +1498,29 @@ text-align: center;
 <div class="row">
 <div class="col-sm-12 col-lg-8">
 <h2 id="introduction">1 - Introduction</h2>
-<p>This ISPU example implements the <em>Sliding Discrete Fourier
-Transform (SDFT)</em> algorithm for computing the magnitude of the DFT
-components (from 0 Hz to 13 Hz) of the accelerometer z-axis over a
-sliding window of 32 samples.</p>
+<p>This ISPU example implements the sliding discrete Fourier transform
+(SDFT) algorithm for computing the magnitude of the DFT components of
+the accelerometer z-axis over a sliding window of 26 samples.</p>
 <p>The accelerometer is configured in high-performance mode at 26
 Hz.</p>
 <p>The sdft library is provided as binary in the <em>ispu/lib</em>
 folder.</p>
 <p>The outputs are as follows:</p>
 <ul>
-<li>DFT magnitude as an array of 16 float values mapped starting from
-ISPU_DOUT_00_L (10h) to ISPU_DOUT_30_L (4Ch)</li>
+<li>Accelerometer z-axis sample as float mapped starting from
+ISPU_DOUT_00_L (10h)</li>
+<li>DFT magnitudes as an array of 14 float values mapped starting from
+ISPU_DOUT_02_L (14h)</li>
 </ul>
 <h2 id="device-orientation">2 - Device orientation</h2>
 <p>None.</p>
 <h2 id="interrupts">3 - Interrupts</h2>
-<p>The configuration generates an interrupt in INT1 when the DFT
-magnitude is computed on the current sliding window and available in the
-output registers.</p>
+<p>The configuration generates an interrupt on INT1 when the DFT
+magnitudes are computed for the new sample and available in output
+registers.</p>
 <hr />
 <p><strong>More Information: <a href="http://st.com/MEMS">http://www.st.com</a></strong></p>
-<p><strong>Copyright © 2022 STMicroelectronics</strong></p>
+<p><strong>Copyright © 2023 STMicroelectronics</strong></p>
 </div>
 </div>
 </body>

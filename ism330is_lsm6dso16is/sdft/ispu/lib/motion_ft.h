@@ -7,7 +7,7 @@
   *******************************************************************************
   * @attention
   *
-  * Copyright (c) 2022 STMicroelectronics.
+  * Copyright (c) 2023 STMicroelectronics.
   * All rights reserved.
   *
   * This software is licensed under terms that can be found in the LICENSE file
@@ -28,7 +28,6 @@ extern "C"
 
 /* Includes ----------------------------------------------------------------- */
 #include <stdint.h>
-#include <stdbool.h>
 
 /** @addtogroup MIDDLEWARES
  *  @{
@@ -42,20 +41,19 @@ extern "C"
 
 typedef struct
 {
-  uint16_t length; // Length of sliding window [#samples]
-  float damp;      // Dampening factor to ensure stability, 0 ≤ damp ≤ 1
-  bool use_norm;   // Apply scaling factor of 1/length
+  uint16_t winlen;    /* Length of sliding window [#samples] */
+  float damping;      /* Damping factor to ensure stability [0 ≤ damping ≤ 1] */
+  uint8_t normalize;  /* Apply scaling factor of 1 / winlen [0: disabled, 1: enabled] */
 } MFT_conf_t;
 
 typedef struct
 {
-  float sample; // Signal sample at time t
+  float sample;  /* Signal sample */
 } MFT_input_t;
 
 typedef struct
 {
-  float *mag;    // Magnitudes of FT coefficients
-  uint16_t nfft; // Number of FT coefficients
+  float *dft_mag;  /* DFT magnitudes (array of (winlen / 2) + 1 length to be allocated by the user) */
 } MFT_output_t;
 
 /**
@@ -73,21 +71,21 @@ typedef struct
 /* Exported functions ------------------------------------------------------- */
 
 /**
- * @brief  Initialize the MotionFT engine
- * @param  conf FT configuration
+ * @brief  Initialize the MotionFT engine.
+ * @param  conf pointer to the structure containing the configuration to set
  * @retval pointer to the new algorithm instance
  */
 void *MotionFT_initialize(MFT_conf_t *conf);
 
 /**
- * @brief  Deinitialize the MotionFT engine
+ * @brief  Deinitialize the MotionFT engine.
  * @param  mft pointer to the algorithm instance
  * @retval none
  */
 void MotionFT_deinitialize(void *mft);
 
 /**
- * @brief  This function runs one step of the sliding DFT algorithm
+ * @brief  Run one step of the sliding DFT algorithm.
  * @param  mft pointer to the algorithm instance
  * @param  data_out pointer to the structure containing the output data
  * @param  data_in pointer to the structure containing the input data
@@ -96,7 +94,7 @@ void MotionFT_deinitialize(void *mft);
 void MotionFT_update(void *mft, MFT_output_t *data_out, MFT_input_t *data_in);
 
 /**
- * @brief  Get the library version
+ * @brief  Get the library version.
  * @param  version pointer to an array of 35 char
  * @retval number of characters in the version string
  */
@@ -118,5 +116,5 @@ uint8_t MotionFT_get_lib_version(char *version);
 }
 #endif
 
-#endif /* _MOTION_FT_H_ */
+#endif /* MOTION_FT_H */
 

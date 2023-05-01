@@ -2,7 +2,7 @@
   ******************************************************************************
   * @attention
   *
-  * Copyright (c) 2022 STMicroelectronics.
+  * Copyright (c) 2023 STMicroelectronics.
   * All rights reserved.
   *
   * This software is licensed under terms that can be found in the LICENSE file
@@ -18,24 +18,25 @@
 #include <stdint.h>
 #include <stdbool.h>
 #include <stddef.h>
-#include <string.h>
 #include "motion_ft.h"
 
-#define ACC_SENS 0.000244f // [g/LSB]
+#define ACC_SENS 0.000244f
+#define WIN_LEN 26u
+#define DFT_LEN ((WIN_LEN / 2u) + 1u)
 
-void __attribute__((signal)) algo_00_init(void);
-void __attribute__((signal)) algo_00(void);
+void __attribute__ ((signal)) algo_00_init(void);
+void __attribute__ ((signal)) algo_00(void);
 
 static volatile uint32_t int_status;
 
 static void *mft;
 
-void __attribute__((signal)) algo_00_init(void)
+void __attribute__ ((signal)) algo_00_init(void)
 {
 	MFT_conf_t conf = {
-		.length = 32u,
-		.damp = 1.0f,
-		.use_norm = true
+		.winlen = WIN_LEN,
+		.damping = 1.0f,
+		.normalize = 1u
 	};
 
 	if (mft != NULL) {
@@ -44,19 +45,18 @@ void __attribute__((signal)) algo_00_init(void)
 	mft = MotionFT_initialize(&conf);
 }
 
-void __attribute__((signal)) algo_00(void)
+void __attribute__ ((signal)) algo_00(void)
 {
 	MFT_input_t data_in;
-	MFT_output_t data_out;
-	(void)memset(&data_out, 0, sizeof(data_out));
+	float dft_mag[DFT_LEN];
+	MFT_output_t data_out = { .dft_mag = dft_mag };
 
-	// Compute real-time Fourier transform on Z-axis
 	data_in.sample = (float)cast_sint16_t(ISPU_ARAW_Z) * ACC_SENS;
 	MotionFT_update(mft, &data_out, &data_in);
 
-	// Place magnitude of DFT in output registers
-	for (uint16_t i = 0u; i < data_out.nfft; i++) {
-		cast_float(ISPU_DOUT_00 + ((int16_t)i * 4)) = data_out.mag[i];
+	cast_float(ISPU_DOUT_00) = data_in.sample;
+	for (uint16_t i = 0u; i < DFT_LEN; i++) {
+		cast_float(ISPU_DOUT_02 + ((int16_t)i * 4)) = dft_mag[i];
 	}
 
 	int_status = int_status | 0x1u;
