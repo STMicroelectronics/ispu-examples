@@ -32,7 +32,7 @@ The accelerometer and gyroscope are mounted in ENU orientation on the left wrist
 
 ## 3 - Interrupts
 
-The configuration generates an interrupt on INT1 when the fitness activity counters for the new sample are computed and available in output registers.
+The configuration generates an interrupt on INT1 when the fitness activity counters for the new sample are computed and available in the output registers.
 
 ------
 

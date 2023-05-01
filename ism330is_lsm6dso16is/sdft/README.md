@@ -17,7 +17,7 @@ None.
 
 ## 3 - Interrupts
 
-The configuration generates an interrupt on INT1 when the DFT magnitudes are computed for the new sample and available in output registers.
+The configuration generates an interrupt on INT1 when the DFT magnitudes are computed for the new sample and available in the output registers.
 
 ------
 

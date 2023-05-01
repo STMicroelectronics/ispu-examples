@@ -14,7 +14,7 @@ None.
 
 ## 3 - Interrupts
 
-The configuration generates an interrupt on INT1 when the message for the new sample is printed and available in output registers.
+The configuration generates an interrupt on INT1 when the message for the new sample is printed and available in the output registers.
 
 ------
 
