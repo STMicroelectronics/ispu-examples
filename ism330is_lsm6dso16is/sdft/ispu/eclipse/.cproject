@@ -53,6 +53,7 @@
 							<tool id="ilg.gnumcueclipse.managedbuild.cross.stred.tool.c.compiler.69115281" name="GNU STRED Cross C Compiler" superClass="ilg.gnumcueclipse.managedbuild.cross.stred.tool.c.compiler">
 								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="ilg.gnumcueclipse.managedbuild.cross.stred.option.c.compiler.include.paths.469351081" name="Include paths (-I)" superClass="ilg.gnumcueclipse.managedbuild.cross.stred.option.c.compiler.include.paths" useByScannerDiscovery="true" valueType="includePath">
 									<listOptionValue builtIn="false" value="../../ispu_utils"/>
+									<listOptionValue builtIn="false" value="../../lib"/>
 								</option>
 								<option id="ilg.gnumcueclipse.managedbuild.cross.stred.option.c.compiler.std.7376302" name="Language standard" superClass="ilg.gnumcueclipse.managedbuild.cross.stred.option.c.compiler.std" useByScannerDiscovery="true" value="ilg.gnumcueclipse.managedbuild.cross.stred.option.c.compiler.std.default" valueType="enumerated"/>
 								<inputType id="ilg.gnumcueclipse.managedbuild.cross.stred.tool.c.compiler.input.2038453421" superClass="ilg.gnumcueclipse.managedbuild.cross.stred.tool.c.compiler.input"/>
@@ -64,6 +65,12 @@
 									<listOptionValue builtIn="false" value="../../ispu_utils/boot.ld"/>
 								</option>
 								<option id="ilg.gnumcueclipse.managedbuild.cross.stred.option.c.linker.usenewlibnano.428310289" name="Use newlib-nano (--specs=nano.specs)" superClass="ilg.gnumcueclipse.managedbuild.cross.stred.option.c.linker.usenewlibnano" useByScannerDiscovery="false" value="true" valueType="boolean"/>
+								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="ilg.gnumcueclipse.managedbuild.cross.stred.option.c.linker.paths.1674716501" name="Library search path (-L)" superClass="ilg.gnumcueclipse.managedbuild.cross.stred.option.c.linker.paths" useByScannerDiscovery="false" valueType="libPaths">
+									<listOptionValue builtIn="false" value="../../lib"/>
+								</option>
+								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="ilg.gnumcueclipse.managedbuild.cross.stred.option.c.linker.libs.904150551" name="Libraries (-l)" superClass="ilg.gnumcueclipse.managedbuild.cross.stred.option.c.linker.libs" useByScannerDiscovery="false" valueType="libs">
+									<listOptionValue builtIn="false" value="MotionFT"/>
+								</option>
 								<inputType id="ilg.gnumcueclipse.managedbuild.cross.stred.tool.c.linker.input.799703759" superClass="ilg.gnumcueclipse.managedbuild.cross.stred.tool.c.linker.input">
 									<additionalInput kind="additionalinputdependency" paths="$(USER_OBJS)"/>
 									<additionalInput kind="additionalinput" paths="$(LIBS)"/>
