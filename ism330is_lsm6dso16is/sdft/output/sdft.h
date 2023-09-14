@@ -23019,6 +23019,7 @@ static const ucf_line_ext_t ispu_conf[] = {
 	{ .op = MEMS_UCF_OP_WRITE, .address = 0x01, .data = 0x00 },
 	{ .op = MEMS_UCF_OP_DELAY, .address = 0, .data = 5 },
 	{ .op = MEMS_UCF_OP_WRITE, .address = 0x10, .data = 0x00 },
+	{ .op = MEMS_UCF_OP_WRITE, .address = 0x11, .data = 0x00 },
 	{ .op = MEMS_UCF_OP_WRITE, .address = 0x0E, .data = 0x80 },
 	{ .op = MEMS_UCF_OP_WRITE, .address = 0x15, .data = 0x00 },
 	{ .op = MEMS_UCF_OP_WRITE, .address = 0x18, .data = 0x20 },
@@ -23028,7 +23029,7 @@ static const ucf_line_ext_t ispu_conf[] = {
 	{ .op = MEMS_UCF_OP_WRITE, .address = 0x50, .data = 0x01 },
 	{ .op = MEMS_UCF_OP_WRITE, .address = 0x70, .data = 0x01 },
 	{ .op = MEMS_UCF_OP_WRITE, .address = 0x01, .data = 0x00 },
-	{ .op = MEMS_UCF_OP_WRITE, .address = 0x10, .data = 0x2C },
+	{ .op = MEMS_UCF_OP_WRITE, .address = 0x10, .data = 0x2C }
 };
 
 #ifdef __cplusplus
