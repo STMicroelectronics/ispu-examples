@@ -1,3 +1,9 @@
+# **Important Notice**
+
+**DISCONTINUED** (November 2025): the maintenance for this repository has been discontinued.
+
+All templates and examples are now available in the main repository for ISPU: [**https://github.com/STMicroelectronics/st-mems-ispu**](https://github.com/STMicroelectronics/st-mems-ispu). Please refer to the main repository for future updates.
+
 ## 1 - Introduction
 
 This software package provides template and example projects as well as libraries for MEMS devices embedding the ISPU (intelligent sensor processing unit).
